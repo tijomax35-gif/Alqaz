@@ -1,1 +1,151 @@
 
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>تحدي الأبطال 🎮</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Tahoma, sans-serif;
+      background: linear-gradient(135deg, #111827, #1e3a8a);
+      color: white;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+
+    .game {
+      width: 100%;
+      max-width: 550px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 25px;
+      padding: 25px;
+      text-align: center;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+    }
+
+    h1 {
+      margin-top: 0;
+      font-size: 32px;
+    }
+
+    .top {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      margin: 20px 0;
+    }
+
+    .box {
+      flex: 1;
+      background: rgba(255,255,255,0.1);
+      padding: 12px;
+      border-radius: 15px;
+    }
+
+    .label {
+      font-size: 13px;
+      opacity: 0.8;
+    }
+
+    .value {
+      font-size: 24px;
+      font-weight: bold;
+      margin-top: 5px;
+    }
+
+    #question {
+      font-size: 24px;
+      line-height: 1.6;
+      margin: 30px 0 20px;
+    }
+
+    #answers {
+      display: grid;
+      gap: 12px;
+    }
+
+    button {
+      border: none;
+      border-radius: 15px;
+      padding: 16px;
+      font-size: 18px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    .answer {
+      background: white;
+      color: #111827;
+    }
+
+    .answer:hover {
+      transform: scale(1.02);
+    }
+
+    .restart {
+      background: #22c55e;
+      color: white;
+      width: 100%;
+    }
+
+    .footer {
+      margin-top: 25px;
+      font-size: 13px;
+      opacity: 0.7;
+    }
+  </style>
+</head>
+
+<body>
+
+  <main class="game">
+
+    <h1>🔥 تحدي الأبطال</h1>
+
+    <div class="top">
+
+      <div class="box">
+        <div class="label">الوقت</div>
+        <div class="value">
+          <span id="timer">30</span> ⏱️
+        </div>
+      </div>
+
+      <div class="box">
+        <div class="label">النقاط</div>
+        <div class="value">
+          <span id="score">0</span> ⭐
+        </div>
+      </div>
+
+    </div>
+
+    <div id="question">
+      جاري تحميل السؤال...
+    </div>
+
+    <div id="answers"></div>
+
+    <div class="footer">
+      تحدي الأبطال © 2026
+    </div>
+
+  </main>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
